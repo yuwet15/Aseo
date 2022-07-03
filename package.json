@@ -1,0 +1,36 @@
+{
+  "name": "template-nodejs-express-postgresql",
+  "version": "1.0.0",
+  "description": "``` DB_USERNAME= DB_PASSWORD= DB_NAME= PORT=3000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "reset_db": "yarn sequelize-cli db:drop && yarn create_db",
+    "create_db": "yarn sequelize-cli db:create && yarn setup_db",
+    "setup_db": "yarn sequelize-cli db:migrate && yarn sequelize-cli db:seed:all",
+    "lint": "eslint ./src index.js",
+    "lint-fix": "eslint --fix ./src index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuwet15/Template-NodeJs-Express-Postgresql.git"
+  },
+  "author": "Yuwen Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuwet15/Template-NodeJs-Express-Postgresql/issues"
+  },
+  "homepage": "https://github.com/yuwet15/Template-NodeJs-Express-Postgresql#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.1",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}

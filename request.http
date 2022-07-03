@@ -1,0 +1,26 @@
+###
+POST http://localhost:3000/api/user/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "yuwen",
+    "age": 30,
+    "email": "email.uc.cl"
+}
+
+###
+GET http://localhost:3000/api/user/users HTTP/1.1
+
+###
+GET http://localhost:3000/api/user/users/1 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/user/users/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "yuwen2"
+}
+
+###
+DELETE http://localhost:3000/api/user/users/1 HTTP/1.1
